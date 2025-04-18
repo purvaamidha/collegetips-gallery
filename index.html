@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollegeTips Photo Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>📸 CollegeTips Gallery</h1>
+    <div class="filters">
+      <button data-filter="*">All</button>
+      <button data-filter=".team">Team Vibes</button>
+      <button data-filter=".campaigns">Creative Campaigns</button>
+      <button data-filter=".fun">Work Hard, Play Hard</button>
+      <button data-filter=".bts">Behind-the-Scenes</button>
+    </div>
+  </header>
 
-    <main>
-        <section id="home">
-            <h1>Welcome to the Photo Gallery</h1>
-            <p>Explore our collection of beautiful images.</p>
-        </section>
+  <main class="gallery">
+    <div class="gallery-item team">
+      <a href="images/team.jpg" class="glightbox" data-gallery="gallery">
+        <img src="images/team.jpg" alt="Team Vibes">
+      </a>
+    </div>
 
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="gallery-grid">
-                <!-- Gallery items -->
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Image 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Image 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/500x350" alt="Image 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/350x400" alt="Image 4">
-                </div>
-                <!-- Add more gallery items here -->
-            </div>
-        </section>
+    <div class="gallery-item campaigns">
+      <a href="images/campaign.jpg" class="glightbox" data-gallery="gallery">
+        <img src="images/campaign.jpg" alt="Creative Campaigns">
+      </a>
+    </div>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Feel free to reach out for more information.</p>
-        </section>
-    </main>
+    <div class="gallery-item fun">
+      <a href="images/fun.jpg" class="glightbox" data-gallery="gallery">
+        <img src="images/fun.jpg" alt="Work Hard, Play Hard">
+      </a>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Photo Gallery. All rights reserved.</p>
-    </footer>
-    
+    <div class="gallery-item bts">
+      <a href="images/bts.jpg" class="glightbox" data-gallery="gallery">
+        <img src="images/bts.jpg" alt="Behind the Scenes">
+      </a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
