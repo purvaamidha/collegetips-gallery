@@ -1,11 +1,12 @@
-// Isotope filter
+// Initialize Isotope for filters
 var iso = new Isotope('.gallery', {
   itemSelector: '.gallery-item',
-  layoutMode: 'masonry'
+  layoutMode: 'fitRows'
 });
 
+// Filter buttons
 document.querySelectorAll('.filters button').forEach(button => {
-  button.addEventListener('click', function () {
+  button.addEventListener('click', () => {
     let filterValue = button.getAttribute('data-filter');
     iso.arrange({ filter: filterValue });
 
@@ -14,7 +15,7 @@ document.querySelectorAll('.filters button').forEach(button => {
   });
 });
 
-// Lightbox init
+// Lightbox
 GLightbox({
   selector: '.glightbox'
 });
