@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CollegeTips Gallery</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollegeTips Photo Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,38 +13,42 @@
     <h1>📸 CollegeTips Gallery</h1>
     <div class="filters">
       <button data-filter="*">All</button>
-      <button data-filter=".team">🤝 Team Vibes</button>
-      <button data-filter=".campaigns">🎨 Creative Campaigns</button>
-      <button data-filter=".fun">🥳 Work Hard, Play Hard</button>
-      <button data-filter=".bts">🎥 Behind-the-Scenes</button>
+      <button data-filter=".team">Team Vibes</button>
+      <button data-filter=".campaigns">Creative Campaigns</button>
+      <button data-filter=".fun">Work Hard, Play Hard</button>
+      <button data-filter=".bts">Behind-the-Scenes</button>
     </div>
   </header>
 
-  <section class="gallery">
+  <main class="gallery">
     <div class="gallery-item team">
       <a href="team.jpg" class="glightbox" data-gallery="gallery">
         <img src="team.jpg" alt="Team Vibes">
       </a>
     </div>
+
     <div class="gallery-item campaigns">
       <a href="campaign.jpg" class="glightbox" data-gallery="gallery">
         <img src="campaign.jpg" alt="Creative Campaigns">
       </a>
     </div>
+
     <div class="gallery-item fun">
       <a href="fun.jpg" class="glightbox" data-gallery="gallery">
-        <img src="fun.jpg" alt="Fun">
+        <img src="fun.jpg" alt="Work Hard, Play Hard">
       </a>
     </div>
+
     <div class="gallery-item bts">
       <a href="bts.jpg" class="glightbox" data-gallery="gallery">
         <img src="bts.jpg" alt="Behind the Scenes">
       </a>
     </div>
-  </section>
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+
