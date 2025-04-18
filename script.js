@@ -1,14 +1,13 @@
-// Initialize Isotope for filters
+// Isotope filter
 var iso = new Isotope('.gallery', {
   itemSelector: '.gallery-item',
   layoutMode: 'fitRows'
 });
 
-// Filter buttons
 document.querySelectorAll('.filters button').forEach(button => {
   button.addEventListener('click', () => {
-    let filterValue = button.getAttribute('data-filter');
-    iso.arrange({ filter: filterValue });
+    const filter = button.getAttribute('data-filter');
+    iso.arrange({ filter: filter });
 
     document.querySelectorAll('.filters button').forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
@@ -16,6 +15,4 @@ document.querySelectorAll('.filters button').forEach(button => {
 });
 
 // Lightbox
-GLightbox({
-  selector: '.glightbox'
-});
+GLightbox({ selector: '.glightbox' });
