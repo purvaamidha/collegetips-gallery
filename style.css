@@ -1,20 +1,26 @@
-body {
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f8f8;
+  background: #f5f5f5;
   color: #333;
 }
 
-/* Header & Filters */
+/* Header */
 header {
   text-align: center;
-  background-color: #ffe5ec;
   padding: 30px 20px;
+  background-color: #ffe5ec;
 }
 
 h1 {
-  margin-bottom: 10px;
   font-size: 2.2rem;
+  margin-bottom: 10px;
 }
 
 .filters {
@@ -22,51 +28,40 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .filters button {
-  background: #ff6b81;
+  background-color: #ff6b81;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border-radius: 20px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .filters button:hover,
 .filters button.active {
-  background: #ff4757;
+  background-color: #ff4757;
 }
 
-/* Masonry Gallery */
+/* Gallery Grid */
 .gallery {
-  columns: 1;
-  column-gap: 20px;
-  padding: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
 }
 
-@media (min-width: 600px) {
-  .gallery {
-    columns: 2;
-  }
-}
-@media (min-width: 900px) {
-  .gallery {
-    columns: 3;
-  }
-}
-
+/* Gallery Items - Fixed Height */
 .gallery-item {
-  break-inside: avoid;
-  margin-bottom: 20px;
-  background: white;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  height: 250px;
 }
 
 .gallery-item:hover {
@@ -75,14 +70,8 @@ h1 {
 
 .gallery-item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure image covers without stretching */
   display: block;
-  height: auto;
-}
-
-.gallery-item p {
-  padding: 10px 15px;
-  margin: 0;
-  font-size: 1rem;
-  background-color: #fff;
-  text-align: center;
+  border-radius: 10px;
 }
